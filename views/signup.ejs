@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle%> - Chat App</title>
+        <link rel="stylesheet" href="/css/signup-page-bootstrap.min.css">
+        <link rel="stylesheet" href="/css/signup.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <%- include('parts/navbar')%>
+    </head>
+<div class="head">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+</div>
+<body class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+    <div class="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
+        <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+            <div>
+            </div>
+            <div class="mt-12 flex flex-col items-center">
+                <h1 class="text-2xl xl:text-3xl font-extrabold">
+                    Sign up for our chat application
+                </h1>
+                <form action="/signup" method="POST" class="w-full flex-1 mt-8">
+                    <div class="mx-auto max-w-xs">
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                            type="text" class="form-control" name="username" placeholder="Username" />
+                            <% let usernameError = validationErrors.find( error => error.param === 'username') %>
+                            <% if (usernameError) { %>
+                                <p class="alert alert-danger">
+                                    <% usernameError.msg %>
+                                </p>
+                            <% } %>
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                            type="email" class="form-control" name="email" placeholder="E-mail" />
+                            <% let emailError = validationErrors.find( error => error.param === 'email') %>
+                            <% if (emailError) { %>
+                                <p class="alert alert-danger">
+                                    <% emailError.msg %>
+                                </p>
+                            <% } %>
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="password" class="form-control" name="password" placeholder="Password" />
+                            <% let passwordError = validationErrors.find( error => error.param === 'password') %>
+                            <% if (passwordError) { %>
+                                <p class="alert alert-danger">
+                                    <% passwordError.msg %>
+                                </p>
+                            <% } %>
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
+                            <% let passwordConfirmError = validationErrors.find(err => err.param === 'passwordConfirm') %>
+                            <% if (passwordConfirmError) { %>
+                                <p class="alert alert-danger">
+                                    <%= passwordConfirmError.msg %>
+                                </p>
+                            <% } %>
+                        <input type="submit" value="Create Account" class="btn btn-primary"/>
+                        <p class="mt-6 text-xs text-gray-600 text-center">
+                            I agree to abide by this app
+                            <a href="#" class="border-b border-gray-500 border-dotted">
+                                Terms of Service
+                            </a>
+                            and its
+                            <a href="#" class="border-b border-gray-500 border-dotted">
+                                Privacy Policy
+                            </a>
+                        </p>
+                        <br>
+                        <div>
+                            Already have account ? <a href="/login">Login</a>
+                        </div>
+                        <%- include('parts/scripts')%>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
+            <div class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat" style="
+            background-image: url('https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg');
+          "></div>
+        </div>
+    </div>
+    <div class="REMOVE-THIS-ELEMENT-IF-YOU-ARE-USING-THIS-PAGE hidden treact-popup fixed inset-0 flex items-center justify-center"
+        style="background-color: rgba(0, 0, 0, 0.3)">
+    </div>
+    <% if(authError) { %>
+        <br>
+        <p class="alert alert-danger">
+            <%= authError%>
+        </p>
+    <% } %>
+</body>
+</html>

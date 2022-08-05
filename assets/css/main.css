@@ -1,0 +1,375 @@
+body {
+    padding-bottom: 20px;
+    background: url(https://a.top4top.io/p_2407li5aq1.jpg) no-repeat fixed bottom right;
+    background-size: 600px 470px;
+}
+
+.container {
+    background: #49535cc4;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.container.text-center {
+    background: transparent;
+}
+
+div#onlineFriends .btn-primary {
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+
+nav {
+    margin-bottom: 15px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0px;
+}
+
+.row.chat {
+    padding: 0 15px;
+}
+
+.row,
+.col {
+    margin-bottom: 5px;
+}
+
+.col {
+    padding: 0 7.5px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+textarea.form-control {
+    height: 60px;
+    resize: none;
+}
+
+#friendRequestsDropdown {
+    margin-right: 20px;
+}
+
+.col.col-12.col-md-4 img {
+    width: 40% !important;
+    margin: 7px;
+    background-color: #f9f9f9;
+    border-radius: 127px;
+}
+
+.col.col-12.col-md-4 {
+    text-align: center;
+    background: #343a40;
+    padding: 20px 0;
+    border-radius: 50px;
+    height: 500px;
+}
+
+.user-image {
+    height: 100px;
+    margin-right: 20px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+}
+
+.user-data {
+    display: inline-block;
+}
+
+.user-data a {
+    color: #fff;
+}
+
+#onlineFriends .col {
+    padding: 15px;
+    border-radius: 35px;
+    border: 3px solid #1111b329;
+}
+
+.chat .side img {
+    width: 40% !important;
+    margin: 7px;
+    background-color: #f9f9f9;
+    border-radius: 127px;
+}
+
+.chat .side {
+    text-align: center;
+    background: #343a40;
+    padding: 20px 0;
+    overflow: auto;
+    border-radius: 50px;
+
+}
+
+.chat .side a {
+    color: #fff;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.chat span.msg {
+    display: block;
+    width: 48%;
+    margin-top: 10px !important;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.chat span.msg.left {
+    background: #007bff;
+    float: right;
+    margin-right: 3%;
+    border-radius: 25px 10px 25px 10px;
+}
+
+.chat span.msg.right {
+    background: #bdbdbd;
+    border-radius: 10px 25px 10px 25px;
+    margin-left: 3%;
+    float: left;
+}
+
+.chat .messages {
+    height: 83vh;
+    padding: 50px;
+    position: relative;
+}
+
+.chat #messages-container {
+    height: 85%;
+    overflow: auto;
+    background-color: #eeeeee66;
+    overflow: auto;
+    border-radius: 15px;
+
+}
+
+.chat .messages-form {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.chat .messages-form textarea {
+    height: 45px;
+    resize: none;
+    width: 80%;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 40px;
+
+}
+
+.chat .messages-form button {
+    position: relative;
+    top: -20px;
+}
+
+.container-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 45vh;
+}
+
+.screen {
+    border-radius: 40px;
+    background: linear-gradient(90deg, #5d54a4a6, #7c78b8c9);
+    position: relative;
+    width: 360px;
+    box-shadow: 0px 0px 24px #5c5696;
+}
+
+.screen__content {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+}
+
+.screen__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 -200px 0);
+}
+
+.screen__background__shape {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.screen__background__shape1 {
+    height: 520px;
+    width: 520px;
+    background: #444d56;
+    right: 120px;
+    border-radius: 20px 72px 20px 20px;
+}
+
+.screen__background__shape2 {
+    height: 220px;
+    width: 220px;
+    background: #6c63ac;
+    top: -122px;
+    right: 0;
+    border-radius: 32px;
+}
+
+.screen__background__shape3 {
+    height: 540px;
+    width: 190px;
+    background: linear-gradient(270deg, #5d54a4, #6a679e);
+    top: 16px;
+    right: 0;
+    border-radius: 32px;
+}
+
+.screen__background__shape4 {
+    height: 400px;
+    width: 200px;
+    background: #7e7bb9;
+    top: 437px;
+    right: 50px;
+    border-radius: 60px;
+}
+
+.login {
+    width: 320px;
+    padding: 30px;
+    /* padding-top: 156px; */
+}
+
+.login__field {
+    padding: 20px 0px;
+    position: relative;
+}
+
+.login__icon {
+    position: absolute;
+    top: 30px;
+    color: #7875b5;
+}
+
+.login__input {
+    border: none;
+    border-bottom: 2px solid #d1d1d4;
+    background: none;
+    padding: 10px;
+    padding-left: 24px;
+    font-weight: 700;
+    width: 75%;
+    transition: 0.2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+    outline: none;
+    border-bottom-color: #6a679e;
+}
+
+.login__submit {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #d4d3e8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #4c489d;
+    box-shadow: 0px 2px 2px #5c5696;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+    border-color: #6a679e;
+    outline: none;
+}
+
+.button__icon {
+    font-size: 24px;
+    margin-left: auto;
+    color: #7875b5;
+}
+
+.social-login {
+    position: absolute;
+    height: 140px;
+    width: 160px;
+    text-align: center;
+    bottom: 0px;
+    right: 0px;
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-login__icon {
+    padding: 20px 10px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0px 0px 8px #7875b5;
+}
+
+.social-login__icon:hover {
+    transform: scale(1.5);
+}
+
+.form-control {
+    display: initial;
+    border-radius: 44px !important;
+    width: 95%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control {
+    display: initial;
+    border-radius: 44px !important;
+    width: 95%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+

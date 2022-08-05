@@ -1,0 +1,71 @@
+<%- include('parts/header')%>
+<%- include('parts/navbar')%>
+
+<div class="container text-center">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Raleway, sans-serif;
+        }
+        
+        body {
+            background-position: left;
+        }
+    
+        </style>
+    <h3>Login</h3>
+    <div class="container-1">
+		<div class="screen">
+			<div class="screen__content">
+				<form action="/login" method="POST" class="login">
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="email" class="form-control" name="email" placeholder="E-mail" />
+						<% let emailError = validationErrors.find( error => error.param === 'email') %>
+                        <% if (emailError) { %>
+                            <p class="alert alert-danger">
+                                <% emailError.msg %>
+                            </p>
+                        <% } %>
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-lock"></i>
+						<input type="password" class="form-control" name="password" placeholder="Password" />
+						<% let passwordError = validationErrors.find( error => error.param === 'password') %>
+                        <% if (passwordError) { %>
+                            <p class="alert alert-danger">
+                                <% passwordError.msg %>
+                            </p>
+                        <% } %>
+					</div>
+					<input type="submit" value="Login" class="button login__submit"/>
+					
+				</form>
+				</div>
+			</div>
+			<div class="screen__background">
+				<span class="screen__background__shape screen__background__shape3"></span>
+				<span class="screen__background__shape screen__background__shape2"></span>
+				<span class="screen__background__shape screen__background__shape1"></span>
+			</div>
+			<% if(authError) { %>
+				<br>
+				<p class="alert alert-danger">
+					<%= authError%>
+				</p>
+			<% } %>
+			
+    
+</div>
+<br>
+    <div>
+        Don't have account ? <a href="/signup">Create Account</a>
+    </div>
+<%- include('parts/scripts')%>
+
+</body>
+</html>
